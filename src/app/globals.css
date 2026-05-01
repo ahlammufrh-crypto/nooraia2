@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1A2B4C; /* Deep Navy Blue */
+  --color-primary-glow: #00FFFF; /* Glowing Light Blue */
+  --color-accent: #00FFFF;
+  --color-background: #000000; /* Black */
+  --color-foreground: #FFFFFF; /* White */
+  --font-sans: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+  
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-up: slide-up 0.4s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  --background: #000000;
+  --foreground: #FFFFFF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.glass-panel {
+  @apply bg-[#000000]/80 backdrop-blur-md border border-[#1A2B4C] shadow-xl;
+}
+
+.neon-border {
+  @apply border border-[#00FFFF]/30 shadow-[0_0_15px_rgba(0,255,255,0.15)];
+}
